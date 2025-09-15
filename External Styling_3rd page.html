@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QRH.ILS</title>
+  <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style> 
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('back.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: monospace;
+    color: white;
+  }
+  header {
+    flex-shrink: 0;
+    background: radial-gradient(#000000, #012353);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    height: 8%;
+  }
+  header img {
+    height: 36px;
+    width: 36px;
+    margin-right: 8px;
+  }
+  header h2 {
+    margin: 0;
+    font-size: 1.4em;
+  }
+  nav button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .header-quote {
+    flex: 1;
+    text-align: center;
+    font-style: italic;
+    font-size: 1em;
+    padding: 0 12px;
+    font-weight: bold;
+    color: #f5c503;
+  }
+  nav button:hover {
+    background: #012353;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Newsletter Grid: now 5 cards */
+  .newsletter {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  .item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+  }
+  .item .text {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.9em;
+    line-height: 1.3;
+    overflow-y: auto;
+  }
+  .item h3 {
+    margin: 0 0 4px;
+    color: #ffcc00;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  /* Hover overlay title */
+  .hover-title {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+  }
+  .item:hover .hover-title {
+    opacity: 1;
+  }
+
+  footer {
+    flex-shrink: 0;
+    background: radial-gradient(#000000, #012353);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 0.9em;
+    height: 6%;
+  }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="LOGO.png" alt="Logo">
+      <h2>Quiel_RH.ILS</h2>
+    </div>
+    <div class="header-quote">
+      <p>“A school archive is the heartbeat of its history—preserving stories, achievements, and memories so every generation can see where learning began and how far it has come.”</p>
+    </div>
+    <nav>
+      <a href="Inline Styling.html"><button>Home</button></a>
+      <a href="Internal Styling.html"><button>About</button></a>
+      <a href="#"><button>School Archives</button></a>
+    </nav>
+  </header>
+
+  <!-- Newsletter: 5 cards -->
+  <div class="newsletter">
+    <div class="item">
+      <img src="ROTC.jpeg" alt="ROTC">
+      <div class="hover-title">ROTC Graduation</div>
+      <div class="text">
+        <h3>ROTC</h3>
+        <p>Joining ROTC was a challenge from the very beginning, and I will never forget those first few weeks. At first, I struggled with the intense heat of the sun during drills, the endless practice sessions, and the pressure to memorize every step and command. The loud shouts of instructions sometimes felt overwhelming, and the number of tests and evaluations made it difficult to keep up, especially when combined with other schoolwork. There were moments when I questioned if I could endure the physical demands and strict discipline required, and I often wondered if I had the strength to continue. However, as the weeks passed, I began to see the purpose behind all the hardships. The constant repetition of drills improved my focus and discipline, while the shouting helped build a sense of alertness, teamwork, and quick response. I discovered that the physical and mental challenges were shaping me into someone stronger, more patient, and more determined. Slowly, I realized that ROTC was not just about following orders—it was about building character and perseverance. The camaraderie with my fellow cadets also made the experience fun and rewarding. We encouraged each other through the toughest drills, shared laughs during breaks, and celebrated every small achievement together. Those friendships and moments of teamwork became some of the best parts of the program. Looking back, ROTC taught me resilience, leadership, and responsibility. Despite the difficulty, I now appreciate the valuable life lessons it gave me, and I can proudly say it was an experience worth every drop of sweat and effort. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="Debate.jpeg" alt="Debate">
+      <div class="hover-title">Debate Battle</div>
+      <div class="text">
+        <h3>Debate</h3>
+        <p>Joining ROTC was a challenge from the very beginning, and I will never forget those first few weeks. At first, I struggled with the intense heat of the sun during drills, the endless practice sessions, and the pressure to memorize every step and command. The loud shouts of instructions sometimes felt overwhelming, and the number of tests and evaluations made it difficult to keep up, especially when combined with other schoolwork. There were moments when I questioned if I could endure the physical demands and strict discipline required, and I often wondered if I had the strength to continue. However, as the weeks passed, I began to see the purpose behind all the hardships. The constant repetition of drills improved my focus and discipline, while the shouting helped build a sense of alertness, teamwork, and quick response. I discovered that the physical and mental challenges were shaping me into someone stronger, more patient, and more determined. Slowly, I realized that ROTC was not just about following orders—it was about building character, perseverance, and responsibility. The camaraderie with my fellow cadets also made the experience fun and rewarding. We encouraged each other through the toughest drills, shared laughs during breaks, and celebrated every small achievement together. Those friendships and moments of teamwork became some of the best parts of the program and made the long hours feel worthwhile. Looking back, ROTC taught me resilience, leadership, and discipline. Despite the difficulty, I now appreciate the valuable life lessons it gave me, and I can proudly say it was an experience worth every drop of sweat and effort, shaping me into a more confident and capable person. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="M&E.jpeg" alt="M&E">
+      <div class="hover-title">Muse and Escort</div>
+      <div class="text">
+        <h3>Muse and Escort</h3>
+        <p>Joining ROTC was a challenge from the very beginning, and I will never forget those first few weeks. At first, I struggled with the intense heat of the sun during drills, the endless practice sessions, and the pressure to memorize every step and command. The loud shouts of instructions sometimes felt overwhelming, and the number of tests and evaluations made it difficult to keep up, especially when combined with other schoolwork. There were moments when I questioned if I could endure the physical demands and strict discipline required, and I often wondered if I had the strength to continue. However, as the weeks passed, I began to see the purpose behind all the hardships. The constant repetition of drills improved my focus and discipline, while the shouting helped build a sense of alertness, teamwork, and quick response. Slowly, I realized that ROTC was not just about following orders—it was about building character, perseverance, and responsibility. The camaraderie with my fellow cadets also made the experience fun and rewarding. We encouraged each other through the toughest drills, shared laughs during breaks, and celebrated every small achievement together. Those friendships and moments of teamwork became some of the best parts of the program and made the long hours feel worthwhile. We learned to trust one another, and that trust created a strong bond that helped us push through even the most exhausting days. Looking back, ROTC taught me resilience, leadership, and discipline. Despite the difficulty, I now appreciate the valuable life lessons it gave me, and I can proudly say it was an experience worth every drop of sweat and effort, shaping me into a more confident and capable person ready to face bigger challenges ahead. </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="First E.png" alt="1st Event">
+      <div class="hover-title">First Event</div>
+      <div class="text">
+        <h3>First year, First event</h3>
+        <p>Our first big event in college was an experience I will always treasure. As freshmen, we were all curious and excited to see what college life had in store for us, and this celebration gave us the perfect welcome. From the moment we arrived, the atmosphere was filled with energy and laughter. There were so many colorful stalls offering delicious food and drinks, and the smell of different snacks made the place feel lively and festive. It was a treat to walk around with friends, trying out the different foods while meeting new classmates and sharing stories. What made the day even more special were the games and activities prepared for everyone. Each game brought so much fun and friendly competition, making us cheer and laugh nonstop. The highlight was watching our schoolmates showcase their talents on stage—singing, dancing, and performing with so much confidence. Their performances inspired us and showed how diverse and creative our college community really is. This first-year event wasn’t just about fun; it helped us connect with each other and feel more at home in our new environment. It broke the ice, built friendships, and gave us memories to cherish. We bonded with classmates we had only just met, finding common interests and forming new friendships that continue today.The event also gave us a glimpse of the many opportunities college offers, from joining clubs to participating in future programs. It reminded me that college life is not only about studying but also about growing socially and emotionally. It was truly the perfect start to our college adventure, one that encouraged us to embrace every new experience with excitement, confidence, and an open heart.
+</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="Planting.png" alt="Planting">
+      <div class="hover-title">First ever planting</div>
+      <div class="text">
+        <h3>First time Planting</h3>
+        <p>My first experience with planting in AFA was truly memorable and eye-opening. It was the first time I had ever planted vegetables, and I felt both excited and a little unsure of what to expect. We planted sitao and lettuce, carefully preparing the soil and placing each seed with hope and patience. I still remember the moment I watered our plants for the first time. It felt simple, but there was something meaningful about giving care to something that would soon grow into life. Every day, checking on the plants became a peaceful routine. Seeing the tiny sprouts slowly push through the soil gave me a sense of calm and happiness. It amazed me how our small efforts—watering, removing weeds, and making sure they had enough sunlight—could result in something so rewarding. The growth of our sitao and lettuce showed me that patience and dedication truly pay off. Although planting was tiring, especially under the sun, the experience was worth every drop of sweat. It gave me a deeper appreciation for farmers and the work behind every vegetable we eat. Watching our plants thrive brought enlightenment, reminding me that consistent effort leads to growth—not just for plants, but for ourselves as well. I also realized how planting connects us to nature in a very personal way. The smell of fresh soil, the feel of water on my hands, and the quiet moments of waiting taught me to slow down and value the simple things. It strengthened our teamwork too, because we encouraged each other and shared the joy of every new leaf. This first planting experience was more than an activity—it was a lesson in responsibility, patience, and the beauty of nurturing life.
+</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span>&copy; 2025 QuielRH. All rights reserved.</span>
+    <span><b>Contact</b>: 0912345667 | <b>Email</b>: QuielRH@gmail.com</span>
+  </footer>
+</body>
+</html>
